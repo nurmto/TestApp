@@ -61,9 +61,7 @@ static float const kWaitDelayBeforeSearchInSeconds = 0.0;
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     // No need to update anything when our view goes background
-    [_delayedSearchTimer invalidate];
-    _delayedSearchTimer = nil;
-    [_venueDataUpdater cancel];
+    [self cancelSearch];
 }
 
 #pragma mark UITableViewDataSource
@@ -102,6 +100,8 @@ static float const kWaitDelayBeforeSearchInSeconds = 0.0;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     [self.view endEditing:YES];
+    // Cancel search when we are opening details view, for avoiding situation that this view and details view are not in sync
+    [self cancelSearch];
     _selectedItemIndexPath = indexPath;    
     [self performSegueWithIdentifier:@"VenueDetails" sender:self];
 }
@@ -135,6 +135,14 @@ static float const kWaitDelayBeforeSearchInSeconds = 0.0;
 }
 
 #pragma mark -
+
+- (void)cancelSearch {
+
+    [_delayedSearchTimer invalidate];
+    _delayedSearchTimer = nil;
+    [_venueDataUpdater cancel];
+    [self updateTitle];
+}
 
 - (void)refreshSearch {
 
