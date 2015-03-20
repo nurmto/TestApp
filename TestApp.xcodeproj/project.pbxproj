@@ -11,6 +11,11 @@
 		2B0F9A251ABAF01000B3236C /* VenueDataUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E0C581AB81A5E00B3A744 /* VenueDataUpdater.m */; };
 		2B0F9A261ABAF07700B3236C /* NSString+TestApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E0C4D1AB7EE6000B3A744 /* NSString+TestApp.m */; };
 		2B0F9A271ABAF07B00B3236C /* NSError+TestApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E0C611AB9348900B3A744 /* NSError+TestApp.m */; };
+		2B0F9A281ABBECC400B3236C /* FoursquareSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E0C3E1AB7C49700B3A744 /* FoursquareSearchRequest.m */; };
+		2B0F9A291ABBECCF00B3236C /* FoursquareBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E0C651AB950B000B3A744 /* FoursquareBaseRequest.m */; };
+		2B0F9A2A1ABBECD900B3236C /* FoursquareVenueInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E0C451AB7E13B00B3A744 /* FoursquareVenueInformation.m */; };
+		2B0F9A2B1ABBECDF00B3236C /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B23F85C1AB7101E000017A7 /* LocationManager.m */; };
+		2B0F9A2C1ABBECE800B3236C /* BackendConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E0C421AB7CA0E00B3A744 /* BackendConfig.m */; };
 		2B23F8341AB6CC79000017A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B23F8331AB6CC79000017A7 /* main.m */; };
 		2B23F8371AB6CC79000017A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B23F8361AB6CC79000017A7 /* AppDelegate.m */; };
 		2B23F83F1AB6CC79000017A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B23F83E1AB6CC79000017A7 /* Images.xcassets */; };
@@ -365,8 +370,13 @@
 			files = (
 				2B0F9A271ABAF07B00B3236C /* NSError+TestApp.m in Sources */,
 				2B0F9A251ABAF01000B3236C /* VenueDataUpdater.m in Sources */,
+				2B0F9A281ABBECC400B3236C /* FoursquareSearchRequest.m in Sources */,
+				2B0F9A2B1ABBECDF00B3236C /* LocationManager.m in Sources */,
 				2B0F9A261ABAF07700B3236C /* NSString+TestApp.m in Sources */,
 				2B8E0C501AB7F34400B3A744 /* FoursquareSearchRequestTests.m in Sources */,
+				2B0F9A2A1ABBECD900B3236C /* FoursquareVenueInformation.m in Sources */,
+				2B0F9A291ABBECCF00B3236C /* FoursquareBaseRequest.m in Sources */,
+				2B0F9A2C1ABBECE800B3236C /* BackendConfig.m in Sources */,
 				2B0F9A241ABAEFE400B3236C /* VenueDataUpdaterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
