@@ -87,6 +87,8 @@ static float const kWaitDelayBeforeSearchInSeconds = 0.0;
     }
     FoursquareVenueInformation *venueInfo = [_resultsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = venueInfo.name;
+    cell.detailTextLabel.text = (venueInfo.distance == kUnknownDistance ? NSLocalizedString(@"VENUE_DISTANCE_NOT_AVAILABLE", @"") :
+                                [NSString stringWithFormat:NSLocalizedString(@"VENUE_DETAILS_DISTANCE_LABEL", @"%d meters"), venueInfo.distance]);
     return cell;
 }
 
