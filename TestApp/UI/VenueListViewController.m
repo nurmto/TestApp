@@ -157,6 +157,9 @@ static float const kWaitDelayBeforeSearchInSeconds = 0.0;
     if (queryText == nil || queryText.length == 0) {
         [self updateWithVenues:nil];
     } else {
+        // We started to fetch new items. Reset current view because it is not up-to-date anymore
+        _resultsArray = NSArray.new;
+        [self.tableView reloadData];
         self.title = NSLocalizedString(@"VENUE_LIST_VIEW_SEARCH_ONGOING_TITLE", @"Searching...");
         [_venueDataUpdater searchVenuesWithQuery:self.searchBar.text onComplete:^(NSArray *venues) {
             [weakSelf updateWithVenues:venues];
