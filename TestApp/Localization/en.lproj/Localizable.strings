@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  TestApp
+*/
+"VENUE_LIST_VIEW_TITLE" = "Search venues";
+"VENUE_LIST_VIEW_SEARCH_RESULTS_MULTIPLE_TITLE" = "Found %d items";
+"VENUE_LIST_VIEW_SEARCH_RESULTS_ONE_TITLE" = "Found 1 item";
+"VENUE_LIST_VIEW_SEARCH_ONGOING_TITLE" = "Searching...";
+"ALERT_BUTTON_TRY_AGAIN" = "Try again";
+"VENUE_DETAILS_VIEW_TITLE" = "Details";
+"VENUE_DETAILS_NAME_LABEL_TITLE" = "Name";
+"VENUE_DETAILS_DISTANCE_LABEL_TITLE" = "Distance";
+"VENUE_DETAILS_DISTANCE_LABEL" = "%d meters";
+"VENUE_DETAILS_ADDRESS_LABEL_TITLE" = "Address";
+"VENUE_DETAILS_INFORMATION_NOT_AVAILABLE" = "Information not available";
+"ERROR_VENUE_SEARCH_TITLE" = "Search Failed";
+"ERROR_LOCATION_SERVICES_DISABLED" = "Device location services setting is disabled. Enable location services from device settings and try again.";
+"ERROR_LOCATION_SERVICES_UNAUTHORIZED" = "Application is not allowed to use location services. Grant application access to location services from device settings.";
+"ERROR_GENERIC_BACKEND_REQUEST_FAILED" = "Network related error occurred: (HTTP %d)";
