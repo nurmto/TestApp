@@ -113,26 +113,16 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
 
-    CLLocation *bestLocation = nil;
-    // Select best location information based on horizontal accuracy
-    for (CLLocation *location in locations) {
-        NSLog(@"location accuracy: %f, %f", location.horizontalAccuracy, location.verticalAccuracy);
-        // Negative value means invalid value. We won't use that kind of location information
-        if (location.horizontalAccuracy >= 0) {
-            if (bestLocation == nil) {
-                bestLocation = location;
-            } else if (location.horizontalAccuracy < bestLocation.horizontalAccuracy) {
-                bestLocation = location;
-            }
-        }
-        if (bestLocation) {
-            NSLog(@"best location, lat:%f, lng:%f", [bestLocation coordinate].latitude, [bestLocation coordinate].longitude);
+    if (locations.count > 0) {
+        CLLocation *currentLocation  =locations.lastObject;
+        if (currentLocation) {
+            NSLog(@"Current location, lat:%f, lng:%f", [currentLocation coordinate].latitude, [currentLocation coordinate].longitude);
             [_locationManager stopUpdatingLocation];
             // Use temporal map for avoiding situation that someone is trying update maptable during enumeration (inside callback)
             NSMapTable *map = _currentLocationObserverToInfoMap;
             _currentLocationObserverToInfoMap = [LocationManager mapTableForLocationObserver];
             for (CurrentLocationObserverInfo *info in map.objectEnumerator) {
-                info.onComplete([bestLocation coordinate].latitude, [bestLocation coordinate].longitude);
+                info.onComplete([currentLocation coordinate].latitude, [currentLocation coordinate].longitude);
             }
         }
     }
